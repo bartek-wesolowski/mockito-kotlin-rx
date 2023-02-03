@@ -8,7 +8,7 @@ A small library that provides helper functions to work with RxJava and Mockito i
 
 Example usages
 --------
-The following function calls from Mockito-Kotlin can now be simplified.
+The following function calls from [Mockito-Kotlin][mockito-kotlin] can now be simplified.
 ```kotlin
 whenever(mock.getStringObservable()).thenReturn(Observable.just("text")) // Mockito-Kotlin
 whenever(mock.getStringObservable()).thenReturnJust("text") // Mockito-Kotlin-Rx
@@ -61,4 +61,5 @@ allprojects {
 implementation("com.github.bartek-wesolowski:mockito-kotlin-rx:1.0.0")
 ```
 
+[mockito-kotlin]: https://github.com/mockito/mockito-kotlin
 [jitpack]: https://jitpack.io/#bartek-wesolowski/customizable-okhttp-logging-interceptor
