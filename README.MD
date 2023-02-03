@@ -29,7 +29,7 @@ val mock = mock<MyClass> {
     on { getStringObservable() } doReturn Observable.just("text") // Mockito-Kotlin
     on { getStringObservable() } doReturnJust "text" // Mockito-Kotlin-Rx
 
-    on { getStringObservable() }.doReturn(Observable.just("text1", "text2", "text3")) // Mockito-Kotlin
+    on { getStringObservable() } doReturn Observable.just("text1", "text2", "text3") // Mockito-Kotlin
     on { getStringObservable() }.doReturnJust("text1", "text2", "text3") // Mockito-Kotlin-Rx
     
     on { getStringObservable() } doReturn Observable.empty() // Mockito-Kotlin
