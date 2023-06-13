@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.8.22'
     id 'maven-publish'
@@ -7,9 +9,15 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType(KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+}
+
 dependencies {
     api "io.reactivex.rxjava3:rxjava:3.1.6"
-    api "org.mockito.kotlin:mockito-kotlin:4.1.0"
+    api "org.mockito.kotlin:mockito-kotlin:5.0.0"
 }
 
 publishing {
