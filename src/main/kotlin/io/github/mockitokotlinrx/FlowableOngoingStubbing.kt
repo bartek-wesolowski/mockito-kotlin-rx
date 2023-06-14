@@ -1,4 +1,4 @@
-package com.bartoszwesolowski.mockitokotlinrx
+package io.github.mockitokotlinrx
 
 import io.reactivex.rxjava3.core.Flowable
 import org.mockito.kotlin.doReturnConsecutively
