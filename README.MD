@@ -1,8 +1,8 @@
 Mockito-Kotlin-Rx
 ===================
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.bartek-wesolowski/mockito-kotlin-rx/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.bartek-wesolowski/mockito-kotlin-rx)
 ![build](https://github.com/bartek-wesolowski/mockito-kotlin-rx/actions/workflows/build.yml/badge.svg)
-[![](https://jitpack.io/v/bartek-wesolowski/mockito-kotlin-rx.svg)](https://jitpack.io/#bartek-wesolowski/mockito-kotlin-rx)
 
 A small library that provides helper functions to work with RxJava and Mockito in Kotlin.
 
@@ -46,20 +46,15 @@ Similar helper functions are available for Flowables, Singles, and Maybes.
 
 Installation
 --------
-Add [JitPack][jitpack] to the repository list:
-
+Mockito-Kotlin-Rx is available on Maven Central. Add the following to your `build.gradle`/`build.gradle.kts` file:
+#### Groovy DSL
 ```groovy
-allprojects {
-  repositories {
-    ...
-
-    maven { url 'https://jitpack.io' }
-}
+testImplementation "io.github.bartek-wesolowski:mockito-kotlin-rx:2.0.0"
 ```
 
+#### Kotlin DSL
 ```kotlin
-implementation("com.github.bartek-wesolowski:mockito-kotlin-rx:1.0.0")
+testImplementation("io.github.bartek-wesolowski:mockito-kotlin-rx:2.0.0")
 ```
 
 [mockito-kotlin]: https://github.com/mockito/mockito-kotlin
-[jitpack]: https://jitpack.io/#bartek-wesolowski/customizable-okhttp-logging-interceptor
