@@ -22,7 +22,7 @@ dependencies {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.DEFAULT)
+    publishToMavenCentral(SonatypeHost.S01)
     signAllPublications()
 
     coordinates("io.github.bartek-wesolowski", "mockito-kotlin-rx", "2.0.0")
