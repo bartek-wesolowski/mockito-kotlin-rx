@@ -1,8 +1,9 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.8.22'
-    id 'maven-publish'
+    id "com.vanniktech.maven.publish" version "0.25.2"
 }
 
 repositories {
@@ -20,21 +21,35 @@ dependencies {
     api "org.mockito.kotlin:mockito-kotlin:5.0.0"
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-            pom {
-                name = 'Mockito-Kotlin-Rx'
-                description = 'RxJava extensions for Mockito-Kotlin.'
-                url = 'https://github.com/bartek-wesolowski/mockito-kotlin-rx'
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.DEFAULT)
+    signAllPublications()
+
+    coordinates("io.github.bartek-wesolowski", "mockito-kotlin-rx", "2.0.0")
+
+    pom {
+        name = "Mockito-Kotlin-Rx"
+        description = "RxJava extensions for Mockito-Kotlin."
+        inceptionYear = "2023"
+        url = "https://github.com/bartek-wesolowski/mockito-kotlin-rx"
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "http://www.apache.org/licenses/LICENSE-2.0.txt"
             }
+        }
+        developers {
+            developer {
+                id = "bartek-wesolowski"
+                name = "Bartosz Wesołowski"
+                url = "https://github.com/bartek-wesolowski/"
+            }
+        }
+        scm {
+            url = "https://github.com/bartek-wesolowski/mockito-kotlin-rx"
+            connection = "scm:git:git://github.com/bartek-wesolowski/mockito-kotlin-rx.git"
+            developerConnection = "scm:git:ssh://git@github.com:bartek-wesolowski/mockito-kotlin-rx.git"
         }
     }
 }
