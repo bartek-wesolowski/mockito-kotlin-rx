@@ -16,6 +16,11 @@ tasks.withType(KotlinCompile).configureEach {
     }
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 dependencies {
     api "io.reactivex.rxjava3:rxjava:3.1.6"
     api "org.mockito.kotlin:mockito-kotlin:5.0.0"
