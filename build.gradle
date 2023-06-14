@@ -2,8 +2,8 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.8.22'
-    id "com.vanniktech.maven.publish" version "0.25.2"
+    alias libs.plugins.kotlin
+    alias libs.plugins.maven.publish
 }
 
 repositories {
@@ -22,8 +22,8 @@ java {
 }
 
 dependencies {
-    api "io.reactivex.rxjava3:rxjava:3.1.6"
-    api "org.mockito.kotlin:mockito-kotlin:5.0.0"
+    api libs.mockito.kotlin
+    api libs.rxjava
 }
 
 mavenPublishing {
