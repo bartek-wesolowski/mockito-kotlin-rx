@@ -19,6 +19,7 @@ dependencies {
     api(libs.rxjava)
 }
 
+// https://vanniktech.github.io/gradle-maven-publish-plugin/central/
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.S01, true)
     signAllPublications()
