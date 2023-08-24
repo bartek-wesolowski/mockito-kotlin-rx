@@ -2,7 +2,7 @@
 kotlinVersion = "1.9.0"
 mavenPublishVersion = "0.25.3"
 mockitoKotlinVersion = "5.1.0"
-rxjavaVersion = "3.1.6"
+rxjavaVersion = "3.1.7"
 
 [libraries]
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlinVersion" }
