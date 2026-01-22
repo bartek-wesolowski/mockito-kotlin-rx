@@ -1,5 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.maven.publish)
@@ -20,7 +18,7 @@ dependencies {
 
 // https://vanniktech.github.io/gradle-maven-publish-plugin/central/
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.S01, true)
+    publishToMavenCentral(automaticRelease = true)
     signAllPublications()
 
     coordinates("io.github.bartek-wesolowski", "mockito-kotlin-rx", "2.0.0")
