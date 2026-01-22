@@ -1,6 +1,6 @@
 [versions]
 kotlinVersion = "2.3.0"
-mavenPublishVersion = "0.30.0"
+mavenPublishVersion = "0.36.0"
 mockitoKotlinVersion = "6.2.2"
 rxjavaVersion = "3.1.10"
 
