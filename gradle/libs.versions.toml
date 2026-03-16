@@ -1,5 +1,5 @@
 [versions]
-kotlinVersion = "2.3.10"
+kotlinVersion = "2.3.20"
 mavenPublishVersion = "0.36.0"
 mockitoKotlinVersion = "6.2.3"
 rxjavaVersion = "3.1.12"
