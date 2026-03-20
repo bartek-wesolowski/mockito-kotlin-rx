@@ -1,7 +1,7 @@
 [versions]
 kotlinVersion = "2.3.20"
 mavenPublishVersion = "0.36.0"
-mockitoKotlinVersion = "6.2.3"
+mockitoKotlinVersion = "6.3.0"
 rxjavaVersion = "3.1.12"
 
 [libraries]
